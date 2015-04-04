@@ -39,7 +39,6 @@ public class ChatActivity extends Activity {
     private static final int MAX_CHAT_MESSAGES_TO_SHOW = 50;
 
 
-
     // Create a handler which can run code periodically
     private Handler handler = new Handler();
 
