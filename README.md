@@ -2,7 +2,7 @@
 This is a chat application that utilizes Parse.
 <br> 
 
-<img src="http://i1369.photobucket.com/albums/ag238/sugarcoder/ChatParse_zpsqmtsvt6e.png" border="0" alt=" photo ChatParse_zpsqmtsvt6e.png"/>
+<img src="http://i1369.photobucket.com/albums/ag238/sugarcoder/ChatParse_zpsqmtsvt6e.png" border="0" alt=" photo ChatParse_zpsqmtsvt6e.png" height="400" width="300" border="1"/>
 
 
 ### Features: 
