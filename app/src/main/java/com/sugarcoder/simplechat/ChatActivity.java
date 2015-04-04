@@ -87,14 +87,26 @@ public class ChatActivity extends Activity {
     }
 
 
-
-
-
     private void startWithCurrentUser() {
         sUserId = ParseUser.getCurrentUser().getObjectId();
         setupMessagePosting();
     }
 
+
+    // Create an anonymous user using ParseAnonymousUtils and set sUserId
+
+    private void login() {
+        ParseAnonymousUtils.logIn(new LogInCallback() {
+            @Override
+            public void done(ParseUser user, ParseException e) {
+                if (e != null) {
+                    Log.d(TAG, "Anonymous login failed: " + e.toString());
+                } else {
+                    startWithCurrentUser();
+                }
+            }
+        });
+    }
 
 
     private void setupMessagePosting() {
@@ -149,22 +161,6 @@ public class ChatActivity extends Activity {
         });
     }
 
-
-
-    // Create an anonymous user using ParseAnonymousUtils and set sUserId
-
-    private void login() {
-        ParseAnonymousUtils.logIn(new LogInCallback() {
-            @Override
-            public void done(ParseUser user, ParseException e) {
-                if (e != null) {
-                    Log.d(TAG, "Anonymous login failed: " + e.toString());
-                } else {
-                    startWithCurrentUser();
-                }
-            }
-        });
-    }
 
 
 
